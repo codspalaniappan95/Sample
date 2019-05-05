@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:id="@+id/activity_main"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/on_off"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/disc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/discovery"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+
+    <Button
+        android:id="@+id/unpair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnDiscover"
+        android:text="@string/finddevice"
+      />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/unpair"
+        android:id="@+id/btnStart"
+        android:text="@string/start_connection"/>
+    <ListView
+        android:layout_marginTop="15dp"
+        android:id="@+id/list"
+        android:layout_below="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/send_message"
+        android:layout_below="@+id/list"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/editText"
+        android:autofillHints="" tools:targetApi="o"
+        android:inputType="" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send"
+        android:id="@+id/btnSend"
+        android:layout_toRightOf="@id/editText"
+        android:layout_below="@id/list"
+        android:layout_toEndOf="@id/editText" />
+</RelativeLayout>
